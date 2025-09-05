@@ -1,10 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/index.html</loc><priority>1.0</priority></url>
-  <url><loc>https://example.com/compliance/index.html</loc><priority>0.8</priority></url>
-  <url><loc>https://example.com/pricing/index.html</loc><priority>0.8</priority></url>
-  <url><loc>https://example.com/pricing/basic.html</loc><priority>0.6</priority></url>
-  <url><loc>https://example.com/pricing/premium.html</loc><priority>0.6</priority></url>
-  <url><loc>https://example.com/about/index.html</loc><priority>0.7</priority></url>
-  <url><loc>https://example.com/about/contact-us.html</loc><priority>0.7</priority></url>
+
+  <!-- Home -->
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/index.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Compliance Section -->
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/information-security-policy.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/roles-and-responsibilities.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/business-impact.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/it-system-data-sensitivity.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/sensitive-it-inventory.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/risk-assessment.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/it-security-audits.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/compliance/security-controls-catalog.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Pricing Section -->
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/pricing/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/pricing/basic.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/pricing/standard.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/pricing/premium.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/about/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eemanqa.github.io/Vita-project/about/contact-us.html</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
