@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensitive IT System Inventory | SPS VITA</title>
+  <meta name="description" content="Sensitive IT System Inventory — Maintain and monitor sensitive IT systems to ensure compliance with SEC-530." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/compliance.css">
+</head>
+<body class="bg-white text-gray-900 banner-page">
+
+<!-- Header -->
+<header class="absolute top-0 left-0 w-full z-50 transition-colors duration-300 bg-transparent" id="main-header">
+  <div class="w-full flex justify-between items-center py-1 px-4 md:container md:mx-auto md:px-0">
+    <!-- Logo -->
+    <img src="../assets/images/logo.png" alt="SPS Logo" class="h-12" loading="lazy">
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:block text-white">
+      <ul class="flex space-x-6 text-base">
+        <li><a href="../index.html" class="hover:text-blue-custom">Home</a></li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom active-page">Compliance <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="information-security-policy.html">Information Security Policy</a></li>
+            <li><a href="roles-and-responsibilities.html">Roles and Responsibilities</a></li>
+            <li><a href="business-impact.html">Business Impact Analysis</a></li>
+            <li><a href="it-system-data-sensitivity.html">IT System & Data Sensitivity</a></li>
+            <li><a href="sensitive-it-inventory.html" class="active">Sensitive IT Inventory</a></li>
+            <li><a href="risk-assessment.html">Risk Assessment</a></li>
+            <li><a href="it-security-audits.html">IT Security Audits</a></li>
+            <li><a href="security-controls-catalog.html">Security Controls Catalog</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">Pricing <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="../pricing/basic-plan.html">Basic</a></li>
+            <li><a href="../pricing/standard-plan.html">Standard</a></li>
+            <li><a href="../pricing/premium-plan.html">Premium</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">About Us <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="../about/contact-us.html">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Login + Hamburger -->
+    <div class="flex items-center space-x-3">
+      <a href="../login/login.html" class="login-btn md:hidden text-white hover:text-blue-custom">Login</a>
+      <button id="mobile-menu-button" class="md:hidden text-black p-2 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <a href="../login/login.html" class="login-btn hidden md:inline-block">Login to CSM</a>
+    </div>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="relative bg-black bg-cover bg-center py-20" style="background-image: url('../assets/images/bg.png');">
+  <div class="container mx-auto px-4 text-left">
+    <h1 class="text-2xl md:text-2xl font-bold text-white mb-3">Sensitive IT System Inventory</h1>
+    <p class="text-base md:text-lg text-gray-200 max-w-2xl">
+      In alignment with the Commonwealth of Virginia’s Information Security Standard SEC-530-01.2, our Security Policy Management as a Service clearly defines the essential governance roles and accountabilities that support a robust security posture.
+    </p>
+  </div>
+</section>
+
+<main class="space-y-4 w-full py-10">
+
+  <!-- Overview -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h1 class="text-2xl font-semibold mb-3">Sensitive IT System Inventory</h1>
+    <p>Sensitive IT systems are those that process, store, or transmit information essential to an agency’s mission, public safety, or regulatory compliance. Maintaining an accurate inventory of these systems ensures that appropriate security controls are applied and continuously monitored.</p>
+    <blockquote class="border-l-4 border-blue-600 pl-4 italic mt-4">
+      “Agencies are required to identify, define, and maintain an inventory of sensitive IT systems to ensure security measures align with business, legal, and operational requirements.” — SEC 530 Standard
+    </blockquote>
+  </section>
+
+  <!-- Overview of Sensitive Systems -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h2 class="text-2xl font-semibold mb-3">Overview of Sensitive IT Systems</h2>
+    <p>A system is considered sensitive if unauthorized access, disclosure, modification, or loss of availability would cause significant adverse impact to the agency, its stakeholders, or the public.</p>
+    <ul class="space-y-3 mt-5">
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Processes mission-critical or confidential information</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Supports essential business or government operations</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Handles data regulated by law or compliance requirements</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Has high potential impact if compromised or unavailable</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Maintaining Sensitive Inventory -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h2 class="text-2xl font-semibold mb-3">Maintaining a Sensitive System Inventory</h2>
+    <p>Agencies must document and regularly update an inventory of all sensitive IT systems. This inventory serves as the foundation for risk assessments, security planning, and compliance reporting.</p>
+    <ul class="space-y-3 mt-5">
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>System Identification: List all IT systems that process or store sensitive data</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Classification: Define sensitivity level (Low, Moderate, High) based on business impact</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Ownership: Assign business and technical owners accountable for security</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Documentation: Record system details including data types, dependencies, and compliance obligations</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Review & Update: Regularly validate and update inventory to reflect system changes</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Importance -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h2 class="text-2xl font-semibold mb-3">Why Inventory Matters</h2>
+    <p>An accurate and up-to-date sensitive IT system inventory enables agencies to focus security resources on the most critical assets, comply with state and federal regulations, and minimize risks to operations, reputation, and public trust.</p>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer-banner text-white pt-2 pb-4 mt-10">
+  <div class="container mx-auto grid md:grid-cols-2 gap-6 px-6">
+    <div class="footer-left">
+      <img src="../assets/images/logo.png" alt="SPS Logo" class="h-16 mb-3" loading="lazy">
+      <p class="footer-desc">
+        Software Productivity Strategists, Inc. (SPS) delivers AI and Cloud-powered industry solutions. 
+        With expertise across design, development, security, and operations, we build scalable, secure, 
+        and reliable systems.
+      </p>
+    </div>
+    <div class="footer-right">
+      <h2 class="text-xl font-bold mb-7">Compliance</h2>
+      <ul class="space-y-2 text-base">
+        <li><a href="information-security-policy.html" class="footer-link">Information Security Policy</a></li>
+        <li><a href="roles-and-responsibilities.html" class="footer-link">Roles and Responsibilities</a></li>
+        <li><a href="business-impact.html" class="footer-link">Business Impact Analysis</a></li>
+        <li><a href="it-system-data-sensitivity.html" class="footer-link">IT System & Data Sensitivity</a></li>
+        <li><a href="sensitive-it-inventory.html" class="footer-link">Sensitive IT Inventory</a></li>
+        <li><a href="risk-assessment.html" class="footer-link">Risk Assessment</a></li>
+        <li><a href="it-security-audits.html" class="footer-link">IT Security Audits</a></li>
+        <li><a href="security-controls-catalog.html" class="footer-link">Security Controls Catalog</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="border-white/40 mt-8 mb-5">
+  <p class="text-center text-sm mt-0 mb-5">© 2025 Software Productivity Strategists, Inc. All Rights Reserved.</p>
+</footer>
+
+<!-- JS -->
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/compliance.js"></script>
+</body>
+</html>

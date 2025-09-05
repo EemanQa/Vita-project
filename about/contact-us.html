@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SPS VITA</title>
+  <meta name="description" content="Need guidance on achieving VITA SEC-530 Compliance? SPS VITA provides tailored support and solutions to help Virginia state agencies meet cybersecurity and compliance requirements." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-white text-gray-900 banner-page">
+
+<!-- Header -->
+<header class="absolute top-0 left-0 w-full z-50 transition-colors duration-300 bg-transparent" id="main-header">
+  <div class="w-full flex justify-between items-center py-1 px-4 md:container md:mx-auto md:px-0">
+    <img src="../assets/images/logo.png" alt="SPS Logo" class="h-12" loading="lazy">
+    <nav class="hidden md:block text-white">
+      <ul class="flex space-x-6 text-base">
+        <li><a href="../index.html" class="hover:text-blue-custom">Home</a></li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">Compliance <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="../compliance/information-security-policy.html">Information Security Policy</a></li>
+            <li><a href="../compliance/roles-and-responsibilities.html">Roles and Responsibilities</a></li>
+            <li><a href="../compliance/business-impact.html">Business Impact Analysis</a></li>
+            <li><a href="../compliance/it-system-data-sensitivity.html">IT System & Data Sensitivity</a></li>
+            <li><a href="../compliance/sensitive-it-inventory.html">Sensitive IT Inventory</a></li>
+            <li><a href="../compliance/risk-assessment.html">Risk Assessment</a></li>
+            <li><a href="../compliance/it-security-audits.html">IT Security Audits</a></li>
+            <li><a href="../compliance/security-controls-catalog.html">Security Controls Catalog</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">Pricing <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="../pricing/basic-plan.html">Basic</a></li>
+            <li><a href="../pricing/standard-plan.html">Standard</a></li>
+            <li><a href="../pricing/premium-plan.html">Premium</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom active-page">About Us <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="contact-us.html" class="active">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="flex items-center space-x-3">
+      <a href="../login/login.html" class="login-btn md:hidden text-white hover:text-blue-custom">Login</a>
+      <button id="mobile-menu-button" class="md:hidden text-black p-2 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <a href="../login/login.html" class="login-btn hidden md:inline-block">Login to CSM</a>
+    </div>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="relative bg-black bg-cover bg-center py-20" style="background-image: url('../assets/images/bg.png');">
+  <div class="container mx-auto px-4 text-left">
+    <h1 class="text-2xl md:text-3xl font-bold text-white mb-3">
+      Helping State of Virginia with VITA SEC-530 Compliance
+    </h1>
+    <p class="text-base md:text-lg text-gray-200 max-w-2xl">
+      Need guidance on achieving VITA SEC-530 Compliance? Our experts provide tailored support and solutions to help Virginia state agencies meet cybersecurity and compliance requirements effectively.
+    </p>
+  </div>
+</section>
+
+<!-- Main Content -->
+<main class="grid md:grid-cols-3  py-12 px-4 md:px-0">
+
+  <!-- Left: Form -->
+  <section class="md:col-span-2 ">
+    <div class="ml-4 md:ml-6 max-w-3xl space-y-6">
+     <h1 class="block mb-2 font-bold text-xl text-black-700">
+          Reach out to us for expert assistance in meeting VITA SEC-530 compliance requirements for Virginia state agencies.
+        </h1>
+    <form id="contactForm" action="#" method="POST" class="space-y-5">
+      <div>
+        <input type="text" name="name" placeholder="Full Name" required class="w-full border p-3 rounded">
+        <small class="text-red-600 hidden"></small>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <input type="email" name="email" placeholder="Email" required class="w-full border p-3 rounded">
+          <small class="text-red-600 hidden"></small>
+        </div>
+        <div>
+          <input type="tel" name="phone" placeholder="Phone Number" required class="w-full border p-3 rounded">
+          <small class="text-red-600 hidden"></small>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <input type="text" name="company" placeholder="Company / Organization" required class="w-full border p-3 rounded">
+          <small class="text-red-600 hidden"></small>
+        </div>
+        <div>
+          <input type="text" name="role" placeholder="Job Title / Role" required class="w-full border p-3 rounded">
+          <small class="text-red-600 hidden"></small>
+        </div>
+      </div>
+
+      <div>
+        <label class="block mb-2 font-semibold text-gray-700">
+          Which date works best for you to meet with our consultant?
+        </label>
+        <input type="date" name="meeting-date" required class="w-full border p-3 rounded">
+        <small class="text-red-600 hidden"></small>
+      </div>
+
+      <button type="submit" class="cta-btn inline-block bg-blue-custom text-white px-6 py-3 rounded font-semibold hover:opacity-90">
+        Submit
+      </button>
+    </form>
+
+    <div id="thankYouMessage" class="hidden text-center mt-8">
+      <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-green-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <p class="text-green-700 text-lg font-medium">
+        Thank you for contacting SPS VITA! Our team will reach out to you soon.
+      </p>
+    </div>
+    </div>
+  </section>
+
+  <!-- Right Side: Contact Info -->
+<section class="space-y-6 mt-10">
+
+  <!-- Contact Info Box -->
+  <div class="bg-gray-100 p-6 rounded space-y-6">
+    <h2 class="text-xl font-bold mb-4">Contact Info</h2>
+    
+    <!-- Call Us -->
+    <div class="flex justify-between items-start gap-2">
+      <div class="flex items-start gap-2">
+        <img src="../assets/images/call-icon.png" alt="Call" class="h-5 w-5 mt-1">
+        <span class="text-blue-600 font-semibold">Call Us</span>
+      </div>
+      <span class="flex-1 text-right">+301-337-2290</span>
+    </div>
+
+    <!-- Email -->
+    <div class="flex justify-between items-start gap-2">
+      <div class="flex items-start gap-2">
+        <img src="../assets/images/email-icon.png" alt="Email" class="h-5 w-5 mt-1">
+        <span class="text-blue-600 font-semibold">Email</span>
+      </div>
+      <span class="flex-1 text-right">support@spsnet.com</span>
+    </div>
+
+    <!-- Address -->
+    <div class="flex justify-between items-start gap-2">
+      <div class="flex items-start gap-2">
+        <img src="../assets/images/address-icon.png" alt="Address" class="h-5 w-5 mt-1">
+        <span class="text-blue-600 font-semibold">Address</span>
+      </div>
+      <span class="flex-1 text-right">2400 Research Blvd, Suite 115, Rockville, MD 20850 USA</span>
+    </div>
+  </div>
+
+  <!-- Follow Us Box -->
+  <div class="bg-blue-600 text-white p-4 rounded flex justify-between items-center">
+    <span class="font-semibold">Follow Us</span>
+    <div class="flex space-x-3">
+      <a href="#" class="hover:opacity-80">
+        <img src="../assets/images/twitter-icon.png" alt="Twitter" class="h-5 w-5">
+      </a>
+      <a href="#" class="hover:opacity-80">
+        <img src="../assets/images/linkedin-icon.png" alt="LinkedIn" class="h-5 w-5">
+      </a>
+    </div>
+  </div>
+
+</section>
+
+
+
+</main>
+
+<!-- Footer (same as previous pages) -->
+<footer class="footer-banner text-white pt-2 pb-4 mt-10">
+  <div class="container mx-auto grid md:grid-cols-2 gap-6 px-6">
+    <div class="footer-left">
+      <img src="../assets/images/logo.png" alt="SPS Logo" class="h-16 mb-3" loading="lazy">
+      <p class="footer-desc">
+        Software Productivity Strategists, Inc. (SPS) delivers AI and Cloud-powered industry solutions. 
+        With expertise across design, development, security, and operations, we build scalable, secure, 
+        and reliable systems.
+      </p>
+    </div>
+    <div class="footer-right">
+      <h2 class="text-xl font-bold mb-7">Compliance</h2>
+      <ul class="space-y-2 text-base">
+        <li><a href="../compliance/information-security-policy.html" class="footer-link">Information Security Policy</a></li>
+        <li><a href="../compliance/roles-and-responsibilities.html" class="footer-link">Roles and Responsibilities</a></li>
+        <li><a href="../compliance/business-impact.html" class="footer-link">Business Impact Analysis</a></li>
+        <li><a href="../compliance/it-system-data-sensitivity.html" class="footer-link">IT System & Data Sensitivity</a></li>
+        <li><a href="../compliance/sensitive-it-inventory.html" class="footer-link">Sensitive IT Inventory</a></li>
+        <li><a href="../compliance/risk-assessment.html" class="footer-link">Risk Assessment</a></li>
+        <li><a href="../compliance/it-security-audits.html" class="footer-link">IT Security Audits</a></li>
+        <li><a href="../compliance/security-controls-catalog.html" class="footer-link">Security Controls Catalog</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="border-white/40 mt-8 mb-5">
+  <p class="text-center text-sm mt-0 mb-5">© 2025 Software Productivity Strategists, Inc. All Rights Reserved.</p>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/form.js"></script>
+
+</body>
+</html>

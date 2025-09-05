@@ -1,0 +1,385 @@
+body { 
+    font-family: 'Roboto', sans-serif; 
+    background: #ffffff; 
+    color: #111827; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* =============================
+   Header / Navbar
+============================= */
+/* Default header: solid background on inner pages */
+header {
+    position: relative;   /* normal flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: #111827;  /* solid for inner pages */
+    color: white;
+    z-index: 50;
+    transition: all 0.3s ease; /* Enhanced: Smooth transition for all properties (background, position, etc.) */
+}
+
+/* Overlay header only on pages with banner */
+body.banner-page header {
+    position: absolute; /* overlay banner */
+    background: transparent;
+}
+
+header.scrolled {
+    background: #111827; /* solid when scrolled */
+    position: fixed; /* makes it stick to top on scroll */
+    transition: all 0.3s ease; /* Added: Ensures smooth transition when scrolled class is added/removed */
+}
+body.banner-page header.scrolled {
+    background: #111827; /* solid when scrolled, overrides transparent */
+    position: fixed; /* ensures it sticks even on banner pages */
+    transition: all 0.3s ease; /* Added: Smooth for banner pages too */
+}
+
+/* Added: Padding to body to prevent content overlap when header is fixed */
+body { padding-top: 0; } /* Default no padding */
+header.scrolled ~ section, header.scrolled ~ footer { /* Only apply padding to sections and footer, excluding marquee div */
+    padding-top: 4rem; /* Adjust based on header height (approx 64px/1rem) */
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    color: white;
+    transition: color 0.3s ease;
+}
+header.scrolled nav ul li a { color: white; } 
+header.scrolled .dropdown-menu-custom li a {
+    color: black !important;
+}
+nav ul li a.active-home::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #02218f;
+    bottom: -2px;
+    left: 0;
+}
+nav ul li a:hover { color: #02218f; text-decoration: none; }
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #02218f;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+nav ul li a:hover::after { width: 100%; }
+
+/* Hamburger Icon */
+#mobile-menu-button svg {
+  color: white;
+}
+
+/* =============================
+   Mobile Menu
+============================= */
+#mobile-menu {
+  background-color: #fff; /* full white background */
+}
+#mobile-menu .login-btn {
+  color: black !important; /* readable */
+}
+#mobile-menu .login-btn:hover {
+  color: #02218f !important;
+}
+nav a.active-page,
+button.active-page {
+  border-bottom: 2px solid #1e40af; /* Adjust to your blue-custom */
+}
+
+
+/* =============================
+   Dropdown Menu
+============================= */
+.dropdown-menu-custom {
+    min-width: 180px;
+    background-color: white;
+    color: black;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 50;
+    border-radius: 0.25rem;
+}
+.dropdown-menu-custom li { border-bottom: 1px solid #e5e7eb; }
+.dropdown-menu-custom li:last-child { border-bottom: none; }
+.dropdown-menu-custom li a {
+    color: black;
+    display: block;
+    padding: 0.4rem 0.8rem;
+    font-weight: normal;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.dropdown-menu-custom li a:hover {
+    color: #02218f;
+    background-color: white;
+    text-decoration: none;
+}
+.group:hover .dropdown-menu-custom { 
+    display: block; 
+    animation: fadeSlideDown 0.3s ease forwards; 
+}
+.dropdown-menu-custom li a.active {
+    color: #1D4ED8; /* Tailwind blue-700 */
+    font-weight: 600; /* semi-bold */
+}
+/* Active state for dropdown links (desktop + mobile) */
+.dropdown-menu-custom li a.active,
+#mobile-menu ul li a.active,
+#mobileNav ul li a.active {
+    color: var(--blue-custom, #2563eb); /* fallback to Tailwind blue-600 */
+    font-weight: 600;
+}
+
+
+@keyframes fadeSlideDown { 
+    0% { opacity: 0; transform: translateY(-5px);} 
+    100% { opacity: 1; transform: translateY(0); } 
+}
+.plus-icon { display: inline-block; transition: transform 1s ease; }
+.group:hover > a .plus-icon { transform: rotate(360deg); }
+
+/* =============================
+   Banner
+============================= */
+section.banner {
+    background: url('/assets/images/bg.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 3rem 0 2rem 0;
+}
+.banner-text { max-width: 100%; }
+.banner-text h1 { font-size: 1.75rem; line-height: 1.4; font-weight: 700; }
+.banner-text p { font-size: 1rem; margin-top: 0.75rem; }
+
+/* =============================
+   Pricing Cards
+============================= */
+.plan-container { 
+    margin-top: 4rem; 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding-left: 7rem; 
+}
+.choose-plan { 
+    position: absolute; 
+    top: -2.5rem; 
+    left: 55%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+}
+.plan-cards { 
+    display: flex; 
+    gap: 1.5rem; 
+    justify-content: center; 
+    margin-top: 1.5rem; 
+    flex-wrap: nowrap; 
+    overflow-x: auto;
+}
+.plan-card { 
+    background: white; 
+    text-align: center; 
+    padding: 0.65rem; 
+    width: 138px; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease; 
+}
+.plan-card h3 { font-size: 1.05rem; margin-bottom: 0.2rem; font-weight: bold; }
+.plan-card p { margin-top: 0.15rem; font-weight: 500; font-size: 0.85rem; }
+
+/* =============================
+   Reusable CTA Buttons
+============================= */
+.cta-btn {
+    margin-top: 0.3rem;
+    display: inline-block;
+    background-color: #02218f;
+    color: white;
+    padding: 0.35rem 0.7rem; 
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 250%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+    transform: skewX(-25deg);
+}
+.cta-btn:hover::before { animation: gradientShine 1s forwards; }
+@keyframes gradientShine { 0% { left: -150%; } 100% { left: 150%; } }
+
+/* Larger Learn More button */
+.learn-more-btn {
+    padding: 0.55rem 1.4rem;
+    font-size: 1rem;
+    border-radius: 0.35rem;
+}
+
+/* =============================
+   Login Button (Desktop)
+============================= */
+.login-btn {
+    margin-right: 0.3rem; 
+    padding: 0.4rem 0.8rem;
+    font-weight: 200;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+.login-btn:hover {
+    background-color: #02218f;
+    color: white;
+    border-color: #02218f;
+}
+
+/* =============================
+   Marquee
+============================= */
+.animate-marquee { display: flex; animation: marquee 20s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+/* =============================
+   Compliance Section
+============================= */
+.compliance-wrapper { padding: 2.5rem 0; }
+.compliance-grid { display: grid; grid-template-columns: 50% 50%; gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.menu-list { list-style: none; padding: 0; margin: 0; }
+.menu-list li {
+    border-left: 4px solid #02218f; 
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    color: #000000;
+    display: block;
+    transition: transform .16s ease, box-shadow .16s ease, color .3s ease;
+    font-weight: 600;
+    font-size: 0.98rem;
+    line-height: 1.4;
+    background-color: #ffffff; 
+    box-shadow: inset 0 0 8px rgba(2,33,143,0.08); 
+}
+.menu-list li:hover {
+    color: #02218f;
+    transform: translateX(4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+.menu-list li span.prefix { margin-right: 0.5rem; color: #02218f; font-weight:700; }
+
+#compliance-content {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #111827;
+}
+#compliance-content h2 { font-weight: 700; margin-bottom: 0.4rem; }
+#compliance-content p { margin-bottom: 0.5rem; }
+#compliance-content ul { margin-left: 1rem; margin-top: 0.3rem; }
+#compliance-content li { margin-bottom: 0.35rem; color: #111827; line-height: 1.25; }
+#compliance-content li strong { font-weight: 700; margin-right: 0.35rem; }
+#compliance-content a.learn-more-link { color: #02218f; font-weight: 600; text-decoration: none; }
+#compliance-content a.learn-more-link:hover { text-decoration: underline; }
+#compliance-content a.learn-more-link::after { content: " ›"; color: #02218f;  }
+
+/* Larger Learn More button */
+.learn-more-btn {
+    padding: 0.55rem 1.2rem;   
+    font-size: 1.1rem;         
+}
+
+/* =============================
+   Footer Styling
+============================= */
+.footer-banner {
+  position: relative;
+  background: url('../images/bg.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  
+}
+
+/* Compliance Links */
+.footer-link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem; 
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link::before {
+  content: "›";
+  margin-right: 0.6rem;
+  font-size: 1.9rem; /* bigger arrow */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: rgb(4, 4, 90);
+}
+
+.footer-link:hover::before {
+  color: rgb(4, 4, 90);
+}
+
+/*  Footer Right Shift */
+.footer-right {
+  margin-left: 5rem; /* moves Compliance block to the right */
+  margin-top: 10px;
+}
+
+/*  Copyright text */
+footer p.text-center {
+
+  font-size: 1rem;    
+  margin-bottom: 2px; 
+}
+
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 767px) {
+    .banner-text { max-width: 100%; }
+    .plan-container { align-items: center; padding-left: 0; }
+    .choose-plan { position: static; transform: none; margin-bottom: 1rem; text-align: center; }
+    .plan-cards { justify-content: center; flex-wrap: wrap; }
+    .compliance-grid { grid-template-columns: 1fr; }
+
+    /* reset footer right margin on small screens */
+    .footer-right { margin-left: 0; }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Controls Catalog | SPS VITA</title>
+  <meta name="description" content="Security Controls Catalog — SPS aligns with VITA SEC-530 to define families of security controls that ensure compliance and resilience across systems." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/compliance.css">
+</head>
+<body class="bg-white text-gray-900 banner-page">
+
+<!-- Header -->
+<header class="absolute top-0 left-0 w-full z-50 transition-colors duration-300 bg-transparent" id="main-header">
+  <div class="w-full flex justify-between items-center py-1 px-4 md:container md:mx-auto md:px-0">
+    <!-- Logo -->
+    <img src="../assets/images/logo.png" alt="SPS Logo" class="h-12" loading="lazy">
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:block text-white">
+      <ul class="flex space-x-6 text-base">
+        <li><a href="../index.html" class="hover:text-blue-custom">Home</a></li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom active-page">Compliance <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="information-security-policy.html">Information Security Policy</a></li>
+            <li><a href="roles-and-responsibilities.html">Roles and Responsibilities</a></li>
+            <li><a href="business-impact.html">Business Impact Analysis</a></li>
+            <li><a href="it-system-data-sensitivity.html">IT System & Data Sensitivity</a></li>
+            <li><a href="sensitive-it-inventory.html">Sensitive IT Inventory</a></li>
+            <li><a href="risk-assessment.html">Risk Assessment</a></li>
+            <li><a href="it-security-audits.html">IT Security Audits</a></li>
+            <li><a href="security-controls-catalog.html" class="active">Security Controls Catalog</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">Pricing <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="../pricing/basic-plan.html">Basic</a></li>
+            <li><a href="../pricing/standard-plan.html">Standard</a></li>
+            <li><a href="../pricing/premium-plan.html">Premium</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">About Us <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="../about/contact-us.html">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Login + Hamburger -->
+    <div class="flex items-center space-x-3">
+      <a href="../login/login.html" class="login-btn md:hidden text-white hover:text-blue-custom">Login</a>
+      <button id="mobile-menu-button" class="md:hidden text-black p-2 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <a href="../login/login.html" class="login-btn hidden md:inline-block">Login to CSM</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white w-full shadow-md">
+    <ul class="flex flex-col divide-y divide-gray-200 text-base text-black">
+      <li><a href="../index.html" class="block px-4 py-3 hover:text-blue-custom">Home</a></li>
+
+      <li>
+        <button class="w-full flex justify-between items-center px-4 py-3 submenu-toggle active-page">
+          Compliance <span class="icon">+</span>
+        </button>
+        <ul class="hidden flex-col bg-gray-50">
+          <li><a href="information-security-policy.html" class="block px-6 py-2 hover:text-blue-custom">Information Security Policy</a></li>
+          <li><a href="roles-and-responsibilities.html" class="block px-6 py-2 hover:text-blue-custom">Roles and Responsibilities</a></li>
+          <li><a href="business-impact.html" class="block px-6 py-2 hover:text-blue-custom">Business Impact Analysis</a></li>
+          <li><a href="it-system-data-sensitivity.html" class="block px-6 py-2 hover:text-blue-custom">IT System & Data Sensitivity</a></li>
+          <li><a href="sensitive-it-inventory.html" class="block px-6 py-2 hover:text-blue-custom">Sensitive IT Inventory</a></li>
+          <li><a href="risk-assessment.html" class="block px-6 py-2 hover:text-blue-custom">Risk Assessment</a></li>
+          <li><a href="it-security-audits.html" class="block px-6 py-2 hover:text-blue-custom">IT Security Audits</a></li>
+          <li><a href="security-controls-catalog.html" class="block px-6 py-2 hover:text-blue-custom">Security Controls Catalog</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <button class="w-full flex justify-between items-center px-4 py-3 submenu-toggle">
+          Pricing <span class="icon">+</span>
+        </button>
+        <ul class="hidden flex-col bg-gray-50">
+          <li><a href="../pricing/basic-plan.html" class="block px-6 py-2 hover:text-blue-custom">Basic</a></li>
+          <li><a href="../pricing/standard-plan.html" class="block px-6 py-2 hover:text-blue-custom">Standard</a></li>
+          <li><a href="../pricing/premium-plan.html" class="block px-6 py-2 hover:text-blue-custom">Premium</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <button class="w-full flex justify-between items-center px-4 py-3 submenu-toggle">
+          About Us <span class="icon">+</span>
+        </button>
+        <ul class="hidden flex-col bg-gray-50">
+          <li><a href="../about/contact-us.html" class="block px-6 py-2 hover:text-blue-custom">Contact Us</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="relative bg-black bg-cover bg-center py-20" style="background-image: url('../assets/images/bg.png');">
+  <div class="container mx-auto px-4 text-left">
+    <h1 class="text-2xl md:text-2xl font-bold text-white mb-3">Security Controls Catalog</h1>
+    <p class="text-base md:text-lg text-gray-200 max-w-1xl">
+      In alignment with the Commonwealth of Virginia’s Information Security Standard SEC-530-01.2, 
+      our Security Policy Management as a Service clearly defines the essential governance roles 
+      and accountabilities that support a robust security posture.
+    </p>
+  </div>
+</section>
+
+<main class="space-y-4 w-full py-10">
+
+  <!-- Security Controls Catalog Overview -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h1 class="text-2xl font-semibold mb-3">Security Controls Catalog</h1>
+    <p>The Commonwealth’s Information Security Standard (SEC-530) defines a catalog of security controls organized into families. Each control contains a statement, a discussion to explain intent, and possible enhancements for higher-risk or sensitive systems.</p>
+    <blockquote class="border-l-4 border-blue-600 pl-4 italic mt-4">
+      “Security controls described in this standard are organized into families. Each family contains controls related to the same security functionality.” — SEC-530 Standard
+    </blockquote>
+  </section>
+
+  <!-- Families of Controls -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h2 class="text-2xl font-semibold mb-6">Families of Security Controls</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="font-bold text-lg mb-2">Access Control (AC)</h3>
+        <p>Controls that limit access to systems, applications, and data to authorized users and processes, including account management, least privilege, and session controls.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Awareness and Training (AT)</h3>
+        <p>Controls to ensure all personnel receive appropriate security and privacy training, promoting awareness of risks and responsibilities.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Audit and Accountability (AU)</h3>
+        <p>Controls for creating, protecting, reviewing, and analyzing audit logs to ensure accountability for user and system activities.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Assessment, Authorization, and Monitoring (CA)</h3>
+        <p>Controls for security assessments, system authorizations, continuous monitoring, and vulnerability management.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Configuration Management (CM)</h3>
+        <p>Controls for establishing baselines, monitoring configuration changes, and enforcing secure settings to prevent unauthorized changes.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Contingency Planning (CP)</h3>
+        <p>Controls to ensure agencies can respond to and recover from disruptions, including disaster recovery and business continuity planning.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Identification and Authentication (IA)</h3>
+        <p>Controls requiring unique identification and robust authentication methods for users, devices, and processes before granting system access.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Incident Response (IR)</h3>
+        <p>Controls for establishing, training, and testing an incident response capability to detect, report, and recover from incidents.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Control -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h2 class="text-2xl font-semibold mb-3">Sample Control: Access Control (AC-2)</h2>
+    <p><strong>Example: Account Management (AC-2)</strong></p>
+    <ul class="space-y-3 mt-4">
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Define allowed account types and assign account managers.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Require approval for creating accounts and promptly disable accounts when users leave.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Review all accounts at least annually.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span>Implement enhancements such as automated account management and disabling inactive accounts.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Structure of Controls -->
+  <section class="bg-white w-full p-8 shadow rounded">
+    <h2 class="text-2xl font-semibold mb-3">Structure of Controls</h2>
+    <p>Each control in SEC-530 includes:</p>
+    <ul class="space-y-3 mt-4">
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span><strong>Control:</strong> The requirement statement.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span><strong>Discussion:</strong> Explanation and intent of the control.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <input type="checkbox" checked class="w-5 h-5 rounded accent-blue-600">
+        <span><strong>Control Enhancements:</strong> Additional or stronger requirements for sensitive systems.</span>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer-banner text-white pt-2 pb-4 mt-10">
+  <div class="container mx-auto grid md:grid-cols-2 gap-6 px-6">
+    <div class="footer-left">
+      <img src="../assets/images/logo.png" alt="SPS Logo" class="h-16 mb-3" loading="lazy">
+      <p class="footer-desc">
+        Software Productivity Strategists, Inc. (SPS) delivers AI and Cloud-powered industry solutions. 
+        With expertise across design, development, security, and operations, we build scalable, secure, 
+        and reliable systems.
+      </p>
+    </div>
+    <div class="footer-right">
+      <h2 class="text-xl font-bold mb-7">Compliance</h2>
+      <ul class="space-y-2 text-base">
+        <li><a href="information-security-policy.html" class="footer-link">Information Security Policy</a></li>
+        <li><a href="roles-and-responsibilities.html" class="footer-link">Roles and Responsibilities</a></li>
+        <li><a href="business-impact.html" class="footer-link">Business Impact Analysis</a></li>
+        <li><a href="it-system-data-sensitivity.html" class="footer-link">IT System & Data Sensitivity</a></li>
+        <li><a href="sensitive-it-inventory.html" class="footer-link">Sensitive IT Inventory</a></li>
+        <li><a href="risk-assessment.html" class="footer-link">Risk Assessment</a></li>
+        <li><a href="it-security-audits.html" class="footer-link">IT Security Audits</a></li>
+        <li><a href="security-controls-catalog.html" class="footer-link">Security Controls Catalog</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="border-white/40 mt-8 mb-5">
+  <p class="text-center text-sm mt-0 mb-5">© 2025 Software Productivity Strategists, Inc. All Rights Reserved.</p>
+</footer>
+
+<!-- JS -->
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/compliance.js"></script>
+</body>
+</html>

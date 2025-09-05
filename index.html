@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Helping organizations meet VITA SEC-530 compliance. SPS provides cybersecurity consulting, tailored solutions, and defense against threats.">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="SPS - VITA SEC-530 Compliance">
+<meta property="og:description" content="Helping organizations meet VITA SEC-530 compliance with tailored cybersecurity solutions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vita.spsnet.com/csm-vita/">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<title>SPS | VITA SEC-530 Compliance</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/compliance.css">
+
+</head>
+<body class="bg-white text-gray-900 banner-page">  <!-- Added banner-page to make header overlay banner consistently -->
+
+<!-- Header -->
+<header class="absolute top-0 left-0 w-full z-50 transition-colors duration-300 bg-transparent md:bg-transparent" id="main-header">
+  <!-- Full width wrapper (no container on mobile) -->
+  <div class="w-full flex justify-between items-center py-1 px-4 md:container md:mx-auto md:px-0">
+    <!-- Logo -->
+    <img src="assets/images/logo.png" alt="SPS Logo" class="h-12" loading="lazy">
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:block text-white">
+      <ul class="flex space-x-6 text-base">
+        <li><a href="index.html" class="active-home hover:text-blue-custom">Home</a></li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">Compliance <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="compliance/information-security-policy.html">Information Security Policy</a></li>
+            <li><a href="compliance/roles-and-responsibilities.html">Roles and Responsibilities</a></li>
+            <li><a href="compliance/business-impact.html">Business Impact</a></li>
+            <li><a href="compliance/it-system-data-sensitivity.html">IT System & Data Sensitivity</a></li>
+            <li><a href="compliance/sensitive-it-inventory.html">Sensitive IT Inventory</a></li>
+            <li><a href="compliance/risk-assessment.html">Risk Assessment</a></li>
+            <li><a href="compliance/it-security-audits.html">IT Security Audits</a></li>
+            <li><a href="compliance/security-controls-catalog.html">Security Controls Catalog</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">Pricing <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="pricing/basic-plan.html">Basic</a></li>
+            <li><a href="pricing/standard-plan.html">Standard</a></li>
+            <li><a href="pricing/premium-plan.html">Premium</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#" class="hover:text-blue-custom">About Us <span class="plus-icon">+</span></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="about/contact-us.html">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Login + Hamburger (mobile only in flex row, desktop separate) -->
+    <div class="flex items-center space-x-3">
+      <!-- Mobile Login -->
+      <a href="login/login.html" class="login-btn md:hidden text-white hover:text-blue-custom">Login</a>
+      
+      <!-- Hamburger -->
+      <button id="mobile-menu-button" class="md:hidden text-black p-2 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Desktop Login -->
+      <a href="login/login.html" class="login-btn hidden md:inline-block">Login to CSM</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white w-full shadow-md">
+    <ul class="flex flex-col divide-y divide-gray-200 text-base text-black">
+      <li><a href="index.html" class="block px-4 py-3 hover:text-blue-custom">Home</a></li>
+
+      <li>
+        <button class="w-full flex justify-between items-center px-4 py-3 submenu-toggle">
+          Compliance <span class="icon">+</span>
+        </button>
+        <ul class="hidden flex-col bg-gray-50">
+          <li><a href="compliance/information-security-policy.html" class="block px-6 py-2 hover:text-blue-custom">Information Security Policy</a></li>
+          <li><a href="compliance/roles-and-responsibilities.html" class="block px-6 py-2 hover:text-blue-custom">Roles and Responsibilities</a></li>
+          <li><a href="compliance/business-impact.html" class="block px-6 py-2 hover:text-blue-custom">Business Impact</a></li>
+          <li><a href="compliance/it-system-data-sensitivity.html" class="block px-6 py-2 hover:text-blue-custom">IT System & Data Sensitivity</a></li>
+          <li><a href="compliance/sensitive-it-inventory.html" class="block px-6 py-2 hover:text-blue-custom">Sensitive IT Inventory</a></li>
+          <li><a href="compliance/risk-assessment.html" class="block px-6 py-2 hover:text-blue-custom">Risk Assessment</a></li>
+          <li><a href="compliance/it-security-audits.html" class="block px-6 py-2 hover:text-blue-custom">IT Security Audits</a></li>
+          <li><a href="compliance/security-controls-catalog.html" class="block px-6 py-2 hover:text-blue-custom">Security Controls Catalog</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <button class="w-full flex justify-between items-center px-4 py-3 submenu-toggle">
+          Pricing <span class="icon">+</span>
+        </button>
+        <ul class="hidden flex-col bg-gray-50">
+          <li><a href="pricing/basic-plan.html" class="block px-6 py-2 hover:text-blue-custom">Basic</a></li>
+          <li><a href="pricing/standard-plan.html" class="block px-6 py-2 hover:text-blue-custom">Standard</a></li>
+          <li><a href="pricing/premium-plan.html" class="block px-6 py-2 hover:text-blue-custom">Premium</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <button class="w-full flex justify-between items-center px-4 py-3 submenu-toggle">
+          About Us <span class="icon">+</span>
+        </button>
+        <ul class="hidden flex-col bg-gray-50">
+          <li><a href="about/contact-us.html" class="block px-6 py-2 hover:text-blue-custom">Contact Us</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- Banner -->
+<section class="text-white py-8 bg-no-repeat bg-cover bg-center" style="background-image: url('assets/images/bg.png');">
+    <div class="container mx-auto grid md:grid-cols-2 gap-0 items-start px-4 pt-10">
+        <div class="banner-text">
+            <h1>Virtual Information Security Officer (vISO) Services for VITA Security Compliance</h1>
+            <p>Our vISOs provide expert, hands-on cybersecurity leadership to help your organization achieve and maintain compliance with VITA, COV, and other regulatory standards. Acting as an integrated member of your team, our vISOs guide staff, manage security documentation, lead risk assessments, and support day-to-day security operations—ensuring your systems are protected, your controls are audit-ready, and your security program is both effective and sustainable.</p>
+            
+            <!-- Learn More Button -->
+         <a href="about/index.html" class="cta-btn learn-more-btn mt-4">Learn More</a>
+
+
+        </div>
+
+        <div class="flex flex-col plan-container">
+            <div class="choose-plan">Choose a Plan</div>
+            <div class="plan-cards">
+                <div class="bg-white text-black p-4 rounded shadow text-center plan-card">
+                    <h3 class="font-bold">Basic</h3>
+                    <p>$1k/month</p>
+                    <a href="pricing/basic-plan.html" class="cta-btn">Get Started</a>
+                </div>
+                <div class="bg-white text-black p-4 rounded shadow text-center plan-card">
+                    <h3 class="font-bold">Standard</h3>
+                    <p>$3k/month</p>
+                    <a href="pricing/standard-plan.html"  class="cta-btn">Get Started</a>
+                </div>
+                <div class="bg-white text-black p-4 rounded shadow text-center plan-card">
+                    <h3 class="font-bold">Premium</h3>
+                    <p>Custom</p>
+                    <a href="pricing/premium-plan.html" class="cta-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Marquee -->
+<div class="bg-gray-100 py-2 ">
+    <marquee>SPS is showcasing VITA SEC-530 Compliance Services at COVITS 2025</marquee>
+</div>
+
+<!-- Compliance Section -->
+<section class="compliance-wrapper">
+    <div class="compliance-grid">
+        <div>
+            <ul id="compliance-list" class="menu-list">
+                <li data-content="policy" class="selected"><span class="prefix">➤</span> Information Security Policy</li>
+                <li data-content="roles"><span class="prefix">➤</span> Roles and Responsibilities</li>
+                <li data-content="impact"><span class="prefix">➤</span> Business Impact Analysis</li>
+                <li data-content="sensitivity"><span class="prefix">➤</span> IT System and Data Sensitivity Classification</li>
+                <li data-content="inventory"><span class="prefix">➤</span> Sensitive IT System Inventory and Definition</li>
+                <li data-content="risk"><span class="prefix">➤</span> Risk Assessment</li>
+                <li data-content="audits"><span class="prefix">➤</span> IT Security Audits</li>
+                <li data-content="catalog"><span class="prefix">➤</span> Security Controls Catalog</li>
+            </ul>
+        </div>
+        <div id="compliance-content">
+            <!-- Default content -->
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-banner text-white pt-2 pb-4 mt-10">
+  <div class="container mx-auto grid md:grid-cols-2 gap-6 px-6">
+
+    <!-- Left Side: Logo + Description -->
+    <div class="footer-left">
+      <img src="assets/images/logo.png" alt="SPS Logo" class="h-16 mb-3" loading="lazy">
+      <p class="footer-desc">
+        Software Productivity Strategists, Inc. (SPS) delivers AI and Cloud-powered industry solutions. 
+        With expertise across design, development, security, and operations, we build scalable, secure, 
+        and reliable systems. Our award-winning team includes IBM-certified inventors and global competition champions.
+      </p>
+    </div>
+
+    <!-- Right Side: Compliance Links -->
+    <div class="footer-right">
+      <h2 class="text-xl font-bold mb-7">Compliance</h2>
+      <ul class="space-y-2 text-base">
+        <li><a href="compliance/information-security-policy.html" class="footer-link">Information Security Policy</a></li>
+        <li><a href="compliance/roles-and-responsibilities.html" class="footer-link">Roles and Responsibilities</a></li>
+        <li><a href="compliance/business-impact.html" class="footer-link">Business Impact Analysis</a></li>
+        <li><a href="compliance/it-system-data-sensitivity.html" class="footer-link">IT System & Data Sensitivity Classification</a></li>
+        <li><a href="compliance/sensitive-it-inventory.html" class="footer-link">Sensitive IT System Inventory and Definition</a></li>
+        <li><a href="compliance/risk-assessment.html" class="footer-link">Risk Assessment</a></li>
+        <li><a href="compliance/it-security-audits.html" class="footer-link">IT Security Audits</a></li>
+        <li><a href="compliance/security-controls-catalog.html" class="footer-link">Security Controls Catalog</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <hr class="border-white/40 mt-8 mb-5">
+
+  <!-- Copyright -->
+  <p class="text-center text-sm mt-0 mb-5">
+    © 2025 Software Productivity Strategists, Inc. All Rights Reserved.
+  </p>
+</footer>
+
+
+
+
+
+
+<!-- JS -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/compliance.js"></script>
+
+</body>
+</html>
